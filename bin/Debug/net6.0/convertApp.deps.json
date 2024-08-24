@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "convertApp/1.0.0": {
+        "dependencies": {
+          "netDxf": "2022.11.2"
+        },
+        "runtime": {
+          "convertApp.dll": {}
+        }
+      },
+      "netDxf/2022.11.2": {
+        "runtime": {
+          "lib/net6.0/netDxf.dll": {
+            "assemblyVersion": "2022.11.2.0",
+            "fileVersion": "2022.11.2.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "convertApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "netDxf/2022.11.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bNiH5EoaRiBsPIQWAVx/Y2PyOUkKaZ89dIHfiJ++B9Kjyph/XevVx11nwAA6oiQ14Kj5pRchY3XfrRnZl6LwlQ==",
+      "path": "netdxf/2022.11.2",
+      "hashPath": "netdxf.2022.11.2.nupkg.sha512"
+    }
+  }
+}

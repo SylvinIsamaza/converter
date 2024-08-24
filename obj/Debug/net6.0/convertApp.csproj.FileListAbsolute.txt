@@ -1,0 +1,17 @@
+E:\Client_project\Canada_C#\convertApp\bin\Debug\net6.0\convertApp.exe
+E:\Client_project\Canada_C#\convertApp\bin\Debug\net6.0\convertApp.deps.json
+E:\Client_project\Canada_C#\convertApp\bin\Debug\net6.0\convertApp.runtimeconfig.json
+E:\Client_project\Canada_C#\convertApp\bin\Debug\net6.0\convertApp.dll
+E:\Client_project\Canada_C#\convertApp\bin\Debug\net6.0\convertApp.pdb
+E:\Client_project\Canada_C#\convertApp\bin\Debug\net6.0\netDxf.dll
+E:\Client_project\Canada_C#\convertApp\obj\Debug\net6.0\convertApp.csproj.AssemblyReference.cache
+E:\Client_project\Canada_C#\convertApp\obj\Debug\net6.0\convertApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\Client_project\Canada_C#\convertApp\obj\Debug\net6.0\convertApp.AssemblyInfoInputs.cache
+E:\Client_project\Canada_C#\convertApp\obj\Debug\net6.0\convertApp.AssemblyInfo.cs
+E:\Client_project\Canada_C#\convertApp\obj\Debug\net6.0\convertApp.csproj.CoreCompileInputs.cache
+E:\Client_project\Canada_C#\convertApp\obj\Debug\net6.0\convertApp.csproj.CopyComplete
+E:\Client_project\Canada_C#\convertApp\obj\Debug\net6.0\convertApp.dll
+E:\Client_project\Canada_C#\convertApp\obj\Debug\net6.0\refint\convertApp.dll
+E:\Client_project\Canada_C#\convertApp\obj\Debug\net6.0\convertApp.pdb
+E:\Client_project\Canada_C#\convertApp\obj\Debug\net6.0\convertApp.genruntimeconfig.cache
+E:\Client_project\Canada_C#\convertApp\obj\Debug\net6.0\ref\convertApp.dll

@@ -1,0 +1,194 @@
+﻿using System;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Windows.Forms;
+using netDxf;
+using System.Linq; // Ensure this is included
+
+public class DxfToImageConverter
+{
+    private const int ImageWidth = 1920; // Width for the output image
+    private const int ImageHeight = 1080; // Height for the output image
+
+    public Bitmap ConvertDxfToBitmap(string dxfFilePath)
+    {
+        Bitmap bitmap = new Bitmap(ImageWidth, ImageHeight);
+        try
+        {
+            DxfDocument dxf = DxfDocument.Load(dxfFilePath);
+
+            using (Graphics g = Graphics.FromImage(bitmap))
+            {
+                g.Clear(Color.White); // Set the background color
+
+                // Define scaling factors (adjust based on your DXF file sizes)
+                float scaleX = ImageWidth / 1000f; // Example scale
+                float scaleY = ImageHeight / 1000f; // Example scale
+
+                // Debugging: Log entity counts
+                Console.WriteLine($"Lines: {dxf.Lines.Count()}");
+                Console.WriteLine($"Circles: {dxf.Circles.Count()}");
+                // Add more logs as needed
+
+                // Draw lines
+                foreach (var line in dxf.Lines)
+                {
+                    var startPoint = ConvertPoint(line.StartPoint, scaleX, scaleY);
+                    var endPoint = ConvertPoint(line.EndPoint, scaleX, scaleY);
+                    g.DrawLine(Pens.Black, startPoint, endPoint);
+                }
+
+                // Draw circles
+                foreach (var circle in dxf.Circles)
+                {
+                    var center = ConvertPoint(circle.Center, scaleX, scaleY);
+                    float radius = (float)circle.Radius * Math.Min(scaleX, scaleY); // Apply scaling
+                    g.DrawEllipse(Pens.Black, 
+                        center.X - radius, 
+                        center.Y - radius, 
+                        radius * 2, 
+                        radius * 2);
+                }
+
+                // Handle additional DXF entities like arcs, polylines, text, etc.
+                foreach (var arc in dxf.Arcs)
+                {
+                    var center = ConvertPoint(arc.Center, scaleX, scaleY);
+                    float radius = (float)arc.Radius * Math.Min(scaleX, scaleY);
+                    float startAngle = (float)arc.StartAngle;
+                    float endAngle = (float)arc.EndAngle;
+                    g.DrawArc(Pens.Black, 
+                        center.X - radius, 
+                        center.Y - radius, 
+                        radius * 2, 
+                        radius * 2, 
+                        startAngle, 
+                        endAngle - startAngle);
+                }
+
+                // Debugging: Check if entities are being drawn correctly
+                Console.WriteLine("Drawing complete.");
+            }
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"Error processing DXF file: {ex.Message}");
+        }
+
+        return bitmap;
+    }
+
+    public Image ConvertDxfToJpeg(string dxfFilePath)
+    {
+        Bitmap bitmap = ConvertDxfToBitmap(dxfFilePath);
+        return bitmap;
+    }
+
+    private PointF ConvertPoint(Vector3 vector, float scaleX, float scaleY)
+    {
+        // Adjust the scaling here based on your DXF file's coordinate range
+        return new PointF((float)vector.X * scaleX, (float)vector.Y * scaleY);
+    }
+
+    public void SaveAsJpeg(Bitmap bitmap, string outputPath, int quality = 100)
+    {
+        ImageCodecInfo jpgEncoder = GetEncoder(ImageFormat.Jpeg);
+        Encoder myEncoder = Encoder.Quality;
+        EncoderParameters myEncoderParameters = new EncoderParameters(1);
+        EncoderParameter myEncoderParameter = new EncoderParameter(myEncoder, quality);
+        myEncoderParameters.Param[0] = myEncoderParameter;
+        bitmap.Save(outputPath, jpgEncoder, myEncoderParameters);
+    }
+
+    private ImageCodecInfo GetEncoder(ImageFormat format)
+    {
+        ImageCodecInfo[] codecs = ImageCodecInfo.GetImageDecoders();
+        foreach (ImageCodecInfo codec in codecs)
+        {
+            if (codec.FormatID == format.Guid)
+            {
+                return codec;
+            }
+        }
+        return null;
+    }
+
+    public Bitmap SelectAndConvertDxf()
+    {
+        Bitmap bitmap = null;
+        using (OpenFileDialog openFileDialog = new OpenFileDialog())
+        {
+            openFileDialog.Filter = "DXF files (*.dxf)|*.dxf";
+            openFileDialog.Title = "Select a DXF file";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string dxfFilePath = openFileDialog.FileName;
+                bitmap = ConvertDxfToBitmap(dxfFilePath);
+            }
+        }
+        return bitmap;
+    }
+}
+
+public class MainForm : Form
+{
+    private Button convertButton;
+    private StatusStrip statusStrip;
+    private ToolStripStatusLabel statusLabel;
+
+    public MainForm()
+    {
+        this.Text = "DXF to Image Converter";
+        this.Size = new Size(300, 200);
+
+        convertButton = new Button
+        {
+            Text = "Select and Convert DXF",
+            Dock = DockStyle.Top
+        };
+        convertButton.Click += ConvertButton_Click;
+
+        statusStrip = new StatusStrip();
+        statusLabel = new ToolStripStatusLabel("Ready");
+        statusStrip.Items.Add(statusLabel);
+
+        this.Controls.Add(convertButton);
+        this.Controls.Add(statusStrip);
+    }
+
+    private void ConvertButton_Click(object sender, EventArgs e)
+    {
+        DxfToImageConverter converter = new DxfToImageConverter();
+        statusLabel.Text = "Selecting DXF file...";
+        Application.DoEvents(); // Refresh UI
+
+        Bitmap bmp = converter.SelectAndConvertDxf();
+        if (bmp != null)
+        {
+            statusLabel.Text = "Converting DXF to image...";
+            Application.DoEvents(); // Refresh UI
+
+            string outputPath = "output.jpg";
+            converter.SaveAsJpeg(bmp, outputPath);
+            bmp.Save("output.bmp", ImageFormat.Bmp);
+
+            statusLabel.Text = "Conversion complete.";
+        }
+        else
+        {
+            statusLabel.Text = "Failed to convert DXF.";
+        }
+    }
+}
+
+class Program
+{
+    [STAThread]
+    static void Main()
+    {
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+        Application.Run(new MainForm());
+    }
+}
