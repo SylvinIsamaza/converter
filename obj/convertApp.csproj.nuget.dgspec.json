@@ -50,6 +50,10 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "IxMilia.Dxf": {
+              "target": "Package",
+              "version": "[0.8.4, )"
+            },
             "System.Drawing.Common": {
               "target": "Package",
               "version": "[7.0.0, )"

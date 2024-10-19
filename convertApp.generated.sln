@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "convertApp", "convertApp.csproj", "{78E0DADA-10F1-48F0-A3BF-651BED5F6490}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "convertApp", "convertApp.csproj", "{A9ABAC3A-B489-4CDF-85CB-19107C845C4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{78E0DADA-10F1-48F0-A3BF-651BED5F6490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78E0DADA-10F1-48F0-A3BF-651BED5F6490}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78E0DADA-10F1-48F0-A3BF-651BED5F6490}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78E0DADA-10F1-48F0-A3BF-651BED5F6490}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9ABAC3A-B489-4CDF-85CB-19107C845C4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9ABAC3A-B489-4CDF-85CB-19107C845C4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9ABAC3A-B489-4CDF-85CB-19107C845C4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9ABAC3A-B489-4CDF-85CB-19107C845C4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

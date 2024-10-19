@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ISAMAZA\\Documents\\c#\\converter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{78E0DADA-10F1-48F0-A3BF-651BED5F6490}|convertApp.csproj|c:\\users\\isamaza\\documents\\c#\\converter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78E0DADA-10F1-48F0-A3BF-651BED5F6490}|convertApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9ABAC3A-B489-4CDF-85CB-19107C845C4F}|convertApp.csproj|c:\\users\\isamaza\\documents\\c#\\converter\\program_1.cs.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A9ABAC3A-B489-4CDF-85CB-19107C845C4F}|convertApp.csproj|solutionrelative:program_1.cs.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78E0DADA-10F1-48F0-A3BF-651BED5F6490}|convertApp.csproj|c:\\users\\isamaza\\documents\\c#\\converter\\output.bmp||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{78E0DADA-10F1-48F0-A3BF-651BED5F6490}|convertApp.csproj|solutionrelative:output.bmp||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78E0DADA-10F1-48F0-A3BF-651BED5F6490}|convertApp.csproj|c:\\users\\isamaza\\documents\\c#\\converter\\output.jpg||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{78E0DADA-10F1-48F0-A3BF-651BED5F6490}|convertApp.csproj|solutionrelative:output.jpg||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78E0DADA-10F1-48F0-A3BF-651BED5F6490}|convertApp.csproj|c:\\users\\isamaza\\documents\\c#\\converter\\program_1.cs.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{78E0DADA-10F1-48F0-A3BF-651BED5F6490}|convertApp.csproj|solutionrelative:program_1.cs.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A9ABAC3A-B489-4CDF-85CB-19107C845C4F}|convertApp.csproj|c:\\users\\isamaza\\documents\\c#\\converter\\output.bmp||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{A9ABAC3A-B489-4CDF-85CB-19107C845C4F}|convertApp.csproj|solutionrelative:output.bmp||{58961B49-13E0-48C0-9258-13CBC4D40279}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,43 +18,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program_1.cs.txt",
               "DocumentMoniker": "C:\\Users\\ISAMAZA\\Documents\\c#\\converter\\Program_1.cs.txt",
               "RelativeDocumentMoniker": "Program_1.cs.txt",
               "ToolTip": "C:\\Users\\ISAMAZA\\Documents\\c#\\converter\\Program_1.cs.txt",
               "RelativeToolTip": "Program_1.cs.txt",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAAACYAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAAAKQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2024-08-21T19:00:44.825Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "output.jpg",
-              "DocumentMoniker": "C:\\Users\\ISAMAZA\\Documents\\c#\\converter\\output.jpg",
-              "RelativeDocumentMoniker": "output.jpg",
-              "ToolTip": "C:\\Users\\ISAMAZA\\Documents\\c#\\converter\\output.jpg",
-              "RelativeToolTip": "output.jpg",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-08-22T18:57:33.77Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "program.cs",
-              "DocumentMoniker": "C:\\Users\\ISAMAZA\\Documents\\c#\\converter\\program.cs",
-              "RelativeDocumentMoniker": "program.cs",
-              "ToolTip": "C:\\Users\\ISAMAZA\\Documents\\c#\\converter\\program.cs",
-              "RelativeToolTip": "program.cs",
-              "ViewState": "AgIAACgBAAAAAAAAAAAcwOQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T18:33:00.884Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -74,7 +43,8 @@
               "ToolTip": "C:\\Users\\ISAMAZA\\Documents\\c#\\converter\\output.bmp",
               "RelativeToolTip": "output.bmp",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-08-22T17:26:55.067Z"
+              "WhenOpened": "2024-08-25T17:59:53.678Z",
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",

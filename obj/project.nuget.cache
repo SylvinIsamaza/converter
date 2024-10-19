@@ -1,13 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "gzvu+KjFOJw=",
+  "dgSpecHash": "HdkD80biKaw=",
   "success": true,
   "projectFilePath": "C:\\Users\\ISAMAZA\\Documents\\c#\\converter\\convertApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ISAMAZA\\.nuget\\packages\\ixmilia.dxf\\0.8.4\\ixmilia.dxf.0.8.4.nupkg.sha512",
+    "C:\\Users\\ISAMAZA\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\ISAMAZA\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "C:\\Users\\ISAMAZA\\.nuget\\packages\\netdxf\\2022.11.2\\netdxf.2022.11.2.nupkg.sha512",
     "C:\\Users\\ISAMAZA\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
     "C:\\Users\\ISAMAZA\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\ISAMAZA\\.nuget\\packages\\system.text.encoding.codepages\\5.0.0\\system.text.encoding.codepages.5.0.0.nupkg.sha512",
     "C:\\Users\\ISAMAZA\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.33\\microsoft.aspnetcore.app.ref.6.0.33.nupkg.sha512",
     "C:\\Users\\ISAMAZA\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.33\\microsoft.netcore.app.host.win-x64.6.0.33.nupkg.sha512",
     "C:\\Users\\ISAMAZA\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.33\\microsoft.netcore.app.ref.6.0.33.nupkg.sha512",
